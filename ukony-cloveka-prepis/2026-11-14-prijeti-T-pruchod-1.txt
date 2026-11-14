@@ -1,0 +1,6 @@
+Přepis Clauda, ne zápis člověka.
+
+2026-11-14 kolem 21:25 UTC, rozhovor člověka s Claudem.
+Otázka Clauda: u každé ze dvou odpovědí GPT stačí napsat „přijímám“ nebo „nepřijímám“; druhou lze nechat bez rozhodnutí.
+Slova člověka: „První přijímám. Druhou nemohu posoudit“
+Zapsáno do jádra: RESULT_ACCEPTED p1 k výsledku r1 úkolu T-pruchod-1, revize 41. K r2 (T-pruchod-2) nezapsáno nic.
