@@ -1,0 +1,16 @@
+verdikt: PASS
+
+Ověřil Claude, který odpověď nepsal. Posuzuji jen to, zda odpověď splňuje zadání úkolu T-pruchod-1; není to přijetí člověkem.
+
+Co jsem zkontroloval:
+1. Vazba na předání: hlavička odpovědi uvádí úkol T-pruchod-1, pokus a1 a otisk balíku 3c6fb1fb…6a80, shodný s balíkem v jádře. Odpověď je v repozitáři G, vystupy/T-pruchod-1/a1.txt @ cff1e20, sha256 3fd3813f…0165; stejný otisk uvedl GPT v issue #1.
+2. Tři požadované části jsou všechny: pokrytí každé části zadání člověka, body bez výslovné opory, nejvýše tři mezery (jsou tři).
+3. Práce jen z přiložených textů: odpověď se neopírá o nic mimo tři texty balíku a sama uvádí, že obsah PLAN-VYSTAVBY.md v podkladech chybí a soulad s ním proto posoudit nelze. To je správně přiznaná mez, ne chyba.
+4. Věcná správnost přiřazení, porovnáno se zněním obou textů: obsah a původ → P1; vztahy → P2; příprava a obnova úkolu s podklady → P3, P4 (P5 jako doplněk); skutečné předání a návrat výsledku → P7; zásah člověka → P8; výsledek × ověření × přijetí → P9 (P10 jako doplněk). Souhlasí. Správně je i to, že „navázat na plán a opravit rozpory“ a „společně vymezit hranice a proveditelnost“ žádný bod P1–P10 výslovně nepokrývá.
+5. Část 2: P5 a P10 jsou podmínky nad rámec výslovného zadání člověka. Souhlasí – v textu člověka nejsou; jsou to návrhové volby.
+
+Výhrady, které verdikt nemění:
+- V části 1 je „P6 dodává odvolatelnost“ zařazeno pod zásah člověka. Je to výklad odpovídajícího; text člověka oprávnění nezmiňuje.
+- Mezera 2 míchá dvě věci (proveditelnost a doložení předání). Je srozumitelná, ale jde o dvě samostatné položky.
+
+Co z odpovědi plyne pro průchod (není součást verdiktu): všechny tři mezery jsou oprávněné. První je zčásti řešena oddílem „Stav k 2026-11-14“ v PLAN-VYSTAVBY.md, druhá tímto průchodem, třetí – skutečný zásah člověka – dosud chybí.
