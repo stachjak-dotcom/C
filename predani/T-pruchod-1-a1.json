@@ -1,0 +1,275 @@
+{
+ "druh": "predani-baliku",
+ "verze": 1,
+ "ukol": "T-pruchod-1",
+ "pokus": "a1",
+ "opravneni": "g1",
+ "prijemce": "GPT",
+ "otiskBaliku": "3c6fb1fb9817e67ae20cf7250f140b627129710506656be1111b98cfd5b06a80",
+ "revizeJadra": 20,
+ "zadani": "Posuď, zda body P1–P10 v návrhu pokrývají to, co má průchod podle zadání člověka pokrýt.\n\nVrať:\n1. ke každé části zadání člověka, který bod návrhu ji pokrývá, nebo že ji nepokrývá žádný;\n2. body návrhu, které v zadání člověka oporu nemají;\n3. nejvýše tři konkrétní mezery, které je třeba doplnit, než průchod prohlásíme za doklad dokončení.\n\nPracuj jen z přiložených textů. Nic neimplementuj.\n",
+ "rozsah": "jen přiložené texty; bez implementace",
+ "nezbytnePodklady": [
+  {
+   "nodeId": "unaiverse://jadro/reaction/navrh-p1-p10",
+   "reason": "posuzovaný návrh"
+  },
+  {
+   "nodeId": "unaiverse://jadro/message/zadani-cloveka-pruchod",
+   "reason": "zadání člověka, vůči kterému se posuzuje"
+  },
+  {
+   "nodeId": "unaiverse://jadro/message/zadani-pro-gpt",
+   "reason": "znění úkolu"
+  }
+ ],
+ "texty": {
+  "unaiverse://jadro/message/zadani-cloveka-pruchod": {
+   "key": "pruchod:zadani-cloveka",
+   "revision": "v1",
+   "sha256": "692ceabe810404024cf63849ee60dfb35b7d7a7c1e5b4d010fa5056674804a2c",
+   "text": "Navazujte na existující zadání a PLAN-VYSTAVBY.md, ale opravte případné rozpory se skutečností. Dokončení musí být doloženo souvislým funkčním průchodem, ne jen součtem zelených testů.\n\nPrůchod má pokrýt uchování obsahu a původu, vztahy, přípravu a obnovu úkolu s podklady, skutečné předání a návrat výsledku, zásah člověka a rozlišení výsledku od jeho ověření a přijetí. Konkrétní hranice a proveditelnost společně vymezte podle zdrojů a dostupného prostředí. Nepředstírejte spuštění agenta, oprávnění ani integraci simulovanou odpovědí.\n"
+  },
+  "unaiverse://jadro/message/zadani-pro-gpt": {
+   "key": "pruchod:zadani-pro-gpt",
+   "revision": "v1",
+   "sha256": "21c160d37de86e167e368e72a8525e3482cec0cb216c2048e72360e308c51ec0",
+   "text": "Posuď, zda body P1–P10 v návrhu pokrývají to, co má průchod podle zadání člověka pokrýt.\n\nVrať:\n1. ke každé části zadání člověka, který bod návrhu ji pokrývá, nebo že ji nepokrývá žádný;\n2. body návrhu, které v zadání člověka oporu nemají;\n3. nejvýše tři konkrétní mezery, které je třeba doplnit, než průchod prohlásíme za doklad dokončení.\n\nPracuj jen z přiložených textů. Nic neimplementuj.\n"
+  },
+  "unaiverse://jadro/reaction/navrh-p1-p10": {
+   "key": "pruchod:navrh-claude",
+   "revision": "v1",
+   "sha256": "4c94137e8d72828304def0d4ec239ac0f81244ba7959eada27f76d0555c5ede6",
+   "text": "Návrh: co znamená „funkční jádro dokončeno“\n\nJeden souvislý průchod nad jednou skutečnou databází (dočasnou, mimo repozitář), spuštěný jedním příkazem a zopakovaný tím z nás, kdo danou část nepsal. Průchod musí postupně doložit:\n\nP1  Uložená zpráva a reakce s původem; po novém otevření stejné.\nP2  Projekt, část, zařazení diskuze a jeho odvolání jako vztahy; obsah a identita se přeuspořádáním nemění.\nP3  Úkol vzniklý zaznamenaným úkonem zadavatele, s nezbytnými podklady.\nP4  Balík se skutečným textem reakce a podkladů; obnovitelný a reprodukovatelný k jedné revizi.\nP5  Změna nebo ztráta nezbytného podkladu zablokuje závislý krok s důvodem.\nP6  Oprávnění k práci udělené záznamem, omezené rozsahem a odvolatelné.\nP7  Skutečné předání: balík převezme jiná běžící relace agenta, ověří otisk a vrátí výsledek, který se zapíše s vazbou na otisk balíku. Žádná dosazená odpověď.\nP8  Zásah člověka během práce: zastavení nebo odvolání oprávnění se projeví – pozdní odpověď se zaznamená, ale neplatí jako výsledek platného pokusu.\nP9  Výsledek, jeho ověření (někým jiným než autorem) a přijetí (jen úkonem člověka) jsou tři různé záznamy; bez přijetí se nic neoznačí za přijaté.\nP10 Změna podkladu po odevzdání označí závislý výsledek k novému posouzení.\n\nSlovo „dokončeno“ zde znamená postaveno, otestováno a nezávisle ověřeno. Přijetí je až úkon člověka.\n"
+  }
+ },
+ "balik": {
+  "conflictCheck": {
+   "beyondView": [],
+   "inSelection": [],
+   "result": "NOT_FOUND_IN_CHECKED_SCOPE",
+   "scope": {
+    "checked": "zaznamenané vztahy 'contradicts' nebo stav 'disputed' v aktivním grafu, které se dotýkají vybraných uzlů",
+    "dataComplete": true,
+    "graphRevision": 16,
+    "limitations": [
+     "konflikt nezaznamenaný jako vztah nelze zjistit",
+     "konflikty mezi uzly mimo výběr se neuvádějí",
+     "účinně odvolané vztahy se nekontrolují"
+    ]
+   }
+  },
+  "contentRefs": [
+   {
+    "locator": {
+     "key": "pruchod:zadani-cloveka",
+     "store": "jadro"
+    },
+    "nodeId": "unaiverse://jadro/message/zadani-cloveka-pruchod",
+    "revision": "v1",
+    "sha256": "692ceabe810404024cf63849ee60dfb35b7d7a7c1e5b4d010fa5056674804a2c"
+   },
+   {
+    "locator": {
+     "key": "pruchod:zadani-pro-gpt",
+     "store": "jadro"
+    },
+    "nodeId": "unaiverse://jadro/message/zadani-pro-gpt",
+    "revision": "v1",
+    "sha256": "21c160d37de86e167e368e72a8525e3482cec0cb216c2048e72360e308c51ec0"
+   },
+   {
+    "locator": {
+     "key": "pruchod:navrh-claude",
+     "store": "jadro"
+    },
+    "nodeId": "unaiverse://jadro/reaction/navrh-p1-p10",
+    "revision": "v1",
+    "sha256": "4c94137e8d72828304def0d4ec239ac0f81244ba7959eada27f76d0555c5ede6"
+   }
+  ],
+  "expandable": [
+   {
+    "discussionId": "unaiverse://jadro/discussion/issue-1",
+    "included": [
+     "unaiverse://jadro/message/zadani-cloveka-pruchod",
+     "unaiverse://jadro/message/zadani-pro-gpt"
+    ],
+    "notIncluded": [],
+    "reasonNotIncluded": "pouhé členství v diskuzi není důvod zahrnutí",
+    "total": 2,
+    "unconfirmedMembers": []
+   }
+  ],
+  "graphRevision": 16,
+  "items": [
+   {
+    "necessity": "required",
+    "nodeId": "unaiverse://jadro/reaction/navrh-p1-p10",
+    "reason": "reakce, ke které úkol patří",
+    "role": "base",
+    "viaRelation": null
+   },
+   {
+    "necessity": "required",
+    "nodeId": "unaiverse://jadro/message/zadani-cloveka-pruchod",
+    "reason": "cílová zpráva reakce",
+    "role": "base",
+    "viaRelation": "unaiverse://jadro/relation/navrh-k-zadani"
+   },
+   {
+    "necessity": "required",
+    "nodeId": "unaiverse://jadro/message/zadani-pro-gpt",
+    "reason": "znění úkolu",
+    "role": "explicit-need",
+    "viaRelation": null
+   }
+  ],
+  "librarianAuthority": {
+   "allowed": [
+    "discover",
+    "read",
+    "load",
+    "project",
+    "inspect",
+    "propose",
+    "appendRelationWithExplicitAuthority"
+   ],
+   "forbidden": [
+    "declareTruth",
+    "authorizeWork",
+    "rewriteNodePayload",
+    "deleteRecord",
+    "rewriteHistory",
+    "mergeIdentity",
+    "expandScope",
+    "expandVisibility",
+    "silentSemanticInference"
+   ],
+   "invariants": [
+    "VIEW != SOURCE_RECORD",
+    "FOUND != APPLICABLE != TRUE",
+    "SIMILAR != SAME_OCCURRENCE",
+    "RELATION WRITE != DATA REWRITE",
+    "STRUCTURAL WRITE REQUIRES EXPLICIT AUTHORITY + PROVENANCE",
+    "HISTORY IS APPEND-ONLY"
+   ],
+   "mode": "bounded-structural-maintenance"
+  },
+  "missingSemanticCandidateIds": [],
+  "nodes": [
+   {
+    "id": "unaiverse://jadro/message/zadani-cloveka-pruchod",
+    "kind": "message",
+    "label": "Člověk: co má průchod pokrýt",
+    "properties": {
+     "locator": {
+      "key": "pruchod:zadani-cloveka",
+      "store": "jadro"
+     }
+    }
+   },
+   {
+    "id": "unaiverse://jadro/message/zadani-pro-gpt",
+    "kind": "message",
+    "label": "Claude: zadání pro GPT",
+    "properties": {
+     "locator": {
+      "key": "pruchod:zadani-pro-gpt",
+      "store": "jadro"
+     }
+    }
+   },
+   {
+    "id": "unaiverse://jadro/reaction/navrh-p1-p10",
+    "kind": "reaction",
+    "label": "Claude: návrh P1–P10",
+    "properties": {
+     "act": "relation-record",
+     "locator": {
+      "key": "pruchod:navrh-claude",
+      "store": "jadro"
+     },
+     "origin": "agent",
+     "relationId": "unaiverse://jadro/relation/navrh-k-zadani"
+    }
+   }
+  ],
+  "notes": {
+   "selectionIsNotAuthorization": true,
+   "textsAreNotInPackage": "obsah zpráv se načítá podle contentRefs a ověřuje otiskem"
+  },
+  "pendingWithdrawals": [],
+  "placements": [
+   {
+    "activeFilings": [
+     {
+      "partId": "unaiverse://jadro/part/souvisly-pruchod",
+      "relationId": "unaiverse://jadro/relation/zarazeni-issue-1"
+     }
+    ],
+    "discussionId": "unaiverse://jadro/discussion/issue-1",
+    "informationalOnly": true,
+    "otherFilings": []
+   }
+  ],
+  "previousPackageHash": null,
+  "quotes": [],
+  "relations": [
+   {
+    "id": "unaiverse://jadro/relation/navrh-k-zadani",
+    "object": "unaiverse://jadro/message/zadani-cloveka-pruchod",
+    "predicate": "appliesTo",
+    "provenance": [
+     "unaiverse://jadro/reaction/navrh-p1-p10"
+    ],
+    "status": "supported",
+    "subject": "unaiverse://jadro/reaction/navrh-p1-p10"
+   }
+  ],
+  "revision": 1,
+  "semanticCandidates": [],
+  "supportNodes": [],
+  "task": {
+   "currentNeed": "zadání člověka, návrh P1–P10 a znění úkolu",
+   "id": "T-pruchod-1",
+   "requiredInputs": [
+    {
+     "nodeId": "unaiverse://jadro/reaction/navrh-p1-p10",
+     "reason": "posuzovaný návrh"
+    },
+    {
+     "nodeId": "unaiverse://jadro/message/zadani-cloveka-pruchod",
+     "reason": "zadání člověka, vůči kterému se posuzuje"
+    },
+    {
+     "nodeId": "unaiverse://jadro/message/zadani-pro-gpt",
+     "reason": "znění úkolu"
+    }
+   ],
+   "role": "ověřovatel",
+   "scope": "jen přiložené texty; bez implementace",
+   "task": "Posuď, zda body P1–P10 v návrhu pokrývají to, co má průchod podle zadání člověka pokrýt.\n\nVrať:\n1. ke každé části zadání člověka, který bod návrhu ji pokrývá, nebo že ji nepokrývá žádný;\n2. body návrhu, které v zadání člověka oporu nemají;\n3. nejvýše tři konkrétní mezery, které je třeba doplnit, než průchod prohlásíme za doklad dokončení.\n\nPracuj jen z přiložených textů. Nic neimplementuj.\n"
+  },
+  "trace": [
+   {
+    "depth": 0,
+    "nodeId": "unaiverse://jadro/reaction/navrh-p1-p10",
+    "via": "anchor"
+   },
+   {
+    "depth": 0,
+    "nodeId": "unaiverse://jadro/message/zadani-cloveka-pruchod",
+    "via": "anchor"
+   },
+   {
+    "depth": 0,
+    "nodeId": "unaiverse://jadro/message/zadani-pro-gpt",
+    "via": "anchor"
+   }
+  ],
+  "viewConflicts": [],
+  "withdrawalEvidence": []
+ },
+ "jakOdpovedet": "Ověř otisk (node jadro/pruchod/prevzit.mjs <tento soubor>). Odpověď ulož jako prostý text do svého repozitáře a do issue #1 napiš repozitář, cestu a commit. Na první řádky odpovědi dej: ukol, pokus, otiskBaliku."
+}
