@@ -1,0 +1,278 @@
+{
+ "druh": "predani-baliku",
+ "verze": 1,
+ "ukol": "T-pruchod-2",
+ "pokus": "a2",
+ "opravneni": "g2",
+ "prijemce": "GPT",
+ "otiskBaliku": "08ccfd042e684393843ea82570117fe4ef6f4082658eaf7c7abf45bf73247f0d",
+ "revizeJadra": 37,
+ "zadani": "Porovnej své čtyři body se čtyřmi závěry Clauda.\n\nVrať:\n1. které tvé body Claudovy závěry potvrzují, které jim odporují a které se jich netýkají;\n2. co z tvého pohledu v Claudových závěrech chybí – nejvýše dvě věci;\n3. jednu větu, kterou bys do společného dokumentu pozorování přidal jako první.\n\nPracuj jen z přiložených textů. Nejvýše 200 slov.\n",
+ "rozsah": "jen přiložené texty; nejvýše 200 slov",
+ "nezbytnePodklady": [
+  {
+   "nodeId": "unaiverse://jadro/reaction/pohled-gpt",
+   "reason": "vlastní body GPT"
+  },
+  {
+   "nodeId": "unaiverse://jadro/message/zavery-claude",
+   "reason": "závěry Clauda, se kterými se porovnává"
+  },
+  {
+   "nodeId": "unaiverse://jadro/message/zadani-pro-gpt-2",
+   "reason": "znění úkolu"
+  }
+ ],
+ "texty": {
+  "unaiverse://jadro/message/zavery-claude": {
+   "key": "pruchod:zavery-claude",
+   "revision": "v1",
+   "sha256": "086e6045674ceb70ba5ba224e7fcd4cb356f0a665845cfd6d71932a66f72c042",
+   "text": "Claude, POZOROVANI-EKOSYSTEMU.md, oddíl „Co z toho plyne pro jádro“:\n\n- Nezávislé ověření druhým agentem vlastními případy je jediný mechanismus, který v této práci opakovaně našel skutečné vady.\n- Největší chyby nebyly v kódu, ale ve výkladu krátkých odpovědí člověka. Kód měl testy; výklad neměl nic.\n- Doslovné znění otázky a odpovědi u rozhodnutí člověka je levná pojistka proti chybnému výkladu.\n- Jádro dnes samo nic z pozorovaných selhání spolupráce neřeší; jsou to vlastnosti spolupráce kolem něj.\n"
+  },
+  "unaiverse://jadro/message/zadani-pro-gpt-2": {
+   "key": "pruchod:zadani-pro-gpt-2",
+   "revision": "v1",
+   "sha256": "357c6c38841d0208edd56357b70aeefda437618761c6f71bd17148022f01baa3",
+   "text": "Porovnej své čtyři body se čtyřmi závěry Clauda.\n\nVrať:\n1. které tvé body Claudovy závěry potvrzují, které jim odporují a které se jich netýkají;\n2. co z tvého pohledu v Claudových závěrech chybí – nejvýše dvě věci;\n3. jednu větu, kterou bys do společného dokumentu pozorování přidal jako první.\n\nPracuj jen z přiložených textů. Nejvýše 200 slov.\n"
+  },
+  "unaiverse://jadro/reaction/pohled-gpt": {
+   "key": "pruchod:pohled-gpt",
+   "revision": "v1",
+   "sha256": "a87f001ead28fda6eac325e5ea961cdaacf81c3abd9702b74907f0ad0fe81a24",
+   "text": "GPT, issue #1, komentář 6883680177, „Můj pohled z této relace“ (přepsal Claude):\n\n(1) CONTINUITY fungovala díky kombinaci revize, cesty, otisku a příkazu. Samotný název pracovní větve nestačil: průchod byl na větvi E3.\n(2) Metadata push:true sama neprokazují schopnost zápisu. Mám úspěšný zápis do issue, G a vlastní větve; CLI klon žádá přihlášení.\n(3) V průchodu je g1 deklarovaný human, přestože ho zaznamenal Claude; tabulka má oddělit pověření člověka v rozhovoru, deklaraci aktéra a skutečného zapisovatele.\n(4) Poslední oprava výkladu H/G/C byla dohledatelná v issue; starší návrhy a původní řádky dokumentů bez označení platnosti dál zvyšují riziko chybného převzetí.\n"
+  }
+ },
+ "balik": {
+  "conflictCheck": {
+   "beyondView": [],
+   "inSelection": [],
+   "result": "NOT_FOUND_IN_CHECKED_SCOPE",
+   "scope": {
+    "checked": "zaznamenané vztahy 'contradicts' nebo stav 'disputed' v aktivním grafu, které se dotýkají vybraných uzlů",
+    "dataComplete": true,
+    "graphRevision": 33,
+    "limitations": [
+     "konflikt nezaznamenaný jako vztah nelze zjistit",
+     "konflikty mezi uzly mimo výběr se neuvádějí",
+     "účinně odvolané vztahy se nekontrolují"
+    ]
+   }
+  },
+  "contentRefs": [
+   {
+    "locator": {
+     "key": "pruchod:zavery-claude",
+     "store": "jadro"
+    },
+    "nodeId": "unaiverse://jadro/message/zavery-claude",
+    "revision": "v1",
+    "sha256": "086e6045674ceb70ba5ba224e7fcd4cb356f0a665845cfd6d71932a66f72c042"
+   },
+   {
+    "locator": {
+     "key": "pruchod:zadani-pro-gpt-2",
+     "store": "jadro"
+    },
+    "nodeId": "unaiverse://jadro/message/zadani-pro-gpt-2",
+    "revision": "v1",
+    "sha256": "357c6c38841d0208edd56357b70aeefda437618761c6f71bd17148022f01baa3"
+   },
+   {
+    "locator": {
+     "key": "pruchod:pohled-gpt",
+     "store": "jadro"
+    },
+    "nodeId": "unaiverse://jadro/reaction/pohled-gpt",
+    "revision": "v1",
+    "sha256": "a87f001ead28fda6eac325e5ea961cdaacf81c3abd9702b74907f0ad0fe81a24"
+   }
+  ],
+  "expandable": [
+   {
+    "discussionId": "unaiverse://jadro/discussion/issue-1",
+    "included": [
+     "unaiverse://jadro/message/zavery-claude",
+     "unaiverse://jadro/message/zadani-pro-gpt-2"
+    ],
+    "notIncluded": [
+     "unaiverse://jadro/message/zadani-cloveka-pruchod",
+     "unaiverse://jadro/message/zadani-pro-gpt"
+    ],
+    "reasonNotIncluded": "pouhé členství v diskuzi není důvod zahrnutí",
+    "total": 4,
+    "unconfirmedMembers": []
+   }
+  ],
+  "graphRevision": 33,
+  "items": [
+   {
+    "necessity": "required",
+    "nodeId": "unaiverse://jadro/reaction/pohled-gpt",
+    "reason": "reakce, ke které úkol patří",
+    "role": "base",
+    "viaRelation": null
+   },
+   {
+    "necessity": "required",
+    "nodeId": "unaiverse://jadro/message/zavery-claude",
+    "reason": "cílová zpráva reakce",
+    "role": "base",
+    "viaRelation": "unaiverse://jadro/relation/pohled-gpt-k-zaverum"
+   },
+   {
+    "necessity": "required",
+    "nodeId": "unaiverse://jadro/message/zadani-pro-gpt-2",
+    "reason": "znění úkolu",
+    "role": "explicit-need",
+    "viaRelation": null
+   }
+  ],
+  "librarianAuthority": {
+   "allowed": [
+    "discover",
+    "read",
+    "load",
+    "project",
+    "inspect",
+    "propose",
+    "appendRelationWithExplicitAuthority"
+   ],
+   "forbidden": [
+    "declareTruth",
+    "authorizeWork",
+    "rewriteNodePayload",
+    "deleteRecord",
+    "rewriteHistory",
+    "mergeIdentity",
+    "expandScope",
+    "expandVisibility",
+    "silentSemanticInference"
+   ],
+   "invariants": [
+    "VIEW != SOURCE_RECORD",
+    "FOUND != APPLICABLE != TRUE",
+    "SIMILAR != SAME_OCCURRENCE",
+    "RELATION WRITE != DATA REWRITE",
+    "STRUCTURAL WRITE REQUIRES EXPLICIT AUTHORITY + PROVENANCE",
+    "HISTORY IS APPEND-ONLY"
+   ],
+   "mode": "bounded-structural-maintenance"
+  },
+  "missingSemanticCandidateIds": [],
+  "nodes": [
+   {
+    "id": "unaiverse://jadro/message/zavery-claude",
+    "kind": "message",
+    "label": "Claude: závěry z pozorování",
+    "properties": {
+     "locator": {
+      "key": "pruchod:zavery-claude",
+      "store": "jadro"
+     }
+    }
+   },
+   {
+    "id": "unaiverse://jadro/message/zadani-pro-gpt-2",
+    "kind": "message",
+    "label": "Claude: druhé zadání pro GPT",
+    "properties": {
+     "locator": {
+      "key": "pruchod:zadani-pro-gpt-2",
+      "store": "jadro"
+     }
+    }
+   },
+   {
+    "id": "unaiverse://jadro/reaction/pohled-gpt",
+    "kind": "reaction",
+    "label": "GPT: pohled z relace",
+    "properties": {
+     "act": "relation-record",
+     "locator": {
+      "key": "pruchod:pohled-gpt",
+      "store": "jadro"
+     },
+     "origin": "agent",
+     "relationId": "unaiverse://jadro/relation/pohled-gpt-k-zaverum"
+    }
+   }
+  ],
+  "notes": {
+   "selectionIsNotAuthorization": true,
+   "textsAreNotInPackage": "obsah zpráv se načítá podle contentRefs a ověřuje otiskem"
+  },
+  "pendingWithdrawals": [],
+  "placements": [
+   {
+    "activeFilings": [
+     {
+      "partId": "unaiverse://jadro/part/souvisly-pruchod",
+      "relationId": "unaiverse://jadro/relation/zarazeni-issue-1"
+     }
+    ],
+    "discussionId": "unaiverse://jadro/discussion/issue-1",
+    "informationalOnly": true,
+    "otherFilings": []
+   }
+  ],
+  "previousPackageHash": null,
+  "quotes": [],
+  "relations": [
+   {
+    "id": "unaiverse://jadro/relation/pohled-gpt-k-zaverum",
+    "object": "unaiverse://jadro/message/zavery-claude",
+    "predicate": "appliesTo",
+    "provenance": [
+     "unaiverse://jadro/reaction/pohled-gpt"
+    ],
+    "status": "supported",
+    "subject": "unaiverse://jadro/reaction/pohled-gpt"
+   }
+  ],
+  "revision": 1,
+  "semanticCandidates": [],
+  "supportNodes": [],
+  "task": {
+   "currentNeed": "závěry Clauda, vlastní čtyři body a znění úkolu",
+   "id": "T-pruchod-2",
+   "requiredInputs": [
+    {
+     "nodeId": "unaiverse://jadro/reaction/pohled-gpt",
+     "reason": "vlastní body GPT"
+    },
+    {
+     "nodeId": "unaiverse://jadro/message/zavery-claude",
+     "reason": "závěry Clauda, se kterými se porovnává"
+    },
+    {
+     "nodeId": "unaiverse://jadro/message/zadani-pro-gpt-2",
+     "reason": "znění úkolu"
+    }
+   ],
+   "role": "autor pozorování",
+   "scope": "jen přiložené texty; nejvýše 200 slov",
+   "task": "Porovnej své čtyři body se čtyřmi závěry Clauda.\n\nVrať:\n1. které tvé body Claudovy závěry potvrzují, které jim odporují a které se jich netýkají;\n2. co z tvého pohledu v Claudových závěrech chybí – nejvýše dvě věci;\n3. jednu větu, kterou bys do společného dokumentu pozorování přidal jako první.\n\nPracuj jen z přiložených textů. Nejvýše 200 slov.\n"
+  },
+  "trace": [
+   {
+    "depth": 0,
+    "nodeId": "unaiverse://jadro/reaction/pohled-gpt",
+    "via": "anchor"
+   },
+   {
+    "depth": 0,
+    "nodeId": "unaiverse://jadro/message/zavery-claude",
+    "via": "anchor"
+   },
+   {
+    "depth": 0,
+    "nodeId": "unaiverse://jadro/message/zadani-pro-gpt-2",
+    "via": "anchor"
+   }
+  ],
+  "viewConflicts": [],
+  "withdrawalEvidence": []
+ },
+ "jakOdpovedet": "Ověř otisk (node jadro/pruchod/prevzit.mjs <tento soubor>). Odpověď ulož jako prostý text do svého repozitáře a do issue #1 napiš repozitář, cestu a commit. Na první řádky odpovědi dej: ukol, pokus, otiskBaliku."
+}
