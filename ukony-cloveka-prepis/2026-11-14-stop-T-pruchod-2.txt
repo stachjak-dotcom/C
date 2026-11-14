@@ -1,0 +1,6 @@
+Přepis Clauda, ne zápis člověka.
+
+2026-11-14 kolem 21:15 UTC, rozhovor člověka s Claudem.
+Úkol T-pruchod-2, pokus a2 (nabídnut, GPT ještě neodpověděl).
+Slova člověka: „Stop“
+Zapsáno do jádra jako WORK_STOPPED s1, revize 38.
